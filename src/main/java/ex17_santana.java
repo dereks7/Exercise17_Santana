@@ -27,8 +27,14 @@ public class ex17_santana
     public static void main( String[] args ) {
         System.out.println("Enter a 1 if you are male or a 2 if you are female: ");
         Scanner in1 = new Scanner(System.in);
-        String morf = in1.nextLine();
-        int n1 = Integer.parseInt(morf);
+
+        if(in1.hasNextInt()){
+            System.out.println("The number is an integer");
+        }
+        else{
+            System.out.println("The number is not an integer");
+        }
+        int n1 = in1.nextInt();
 
         double adr = 0.00;
         if(n1 == 1)
